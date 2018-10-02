@@ -23,5 +23,8 @@ void MainWindow::on_actExit_triggered()
 
 void MainWindow::on_btnShowInfo_clicked()
 {
-    QMessageBox::information(this, "Hi", "How are you today?");
+    QString firstName = ui->ledFname->text();
+    QString lastName = ui->ledLname->text();
+
+    QMessageBox::information(this, "Hi", firstName + " - " + lastName );
 }
